@@ -49,7 +49,7 @@ This view is completed already! It displays all of the movies in the movie datab
 - [X] Set up database
 - [X] Create base README
 - [X] Add MUI
-- [ ] Give movie poster button functionality
+- [X] Give movie poster button functionality
 
 ### Details Page
 
