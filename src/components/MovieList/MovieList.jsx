@@ -22,7 +22,7 @@ function MovieList() {
                     return (
                         <div key={movie.id} >
                             <h3>{movie.title}</h3>
-                            <Button >
+                            <Button onClick={() => history.push('/details')}>
                                 <CardMedia component="img" image={movie.poster} alt={movie.title} />
                             </Button>
                         </div>

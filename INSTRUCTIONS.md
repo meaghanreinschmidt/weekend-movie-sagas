@@ -50,6 +50,8 @@ This view is completed already! It displays all of the movies in the movie datab
 - [X] Create base README
 - [X] Add MUI
 - [X] Give movie poster button functionality
+- [X] History.push on movie poster
+- [X] Add `/details` route to App
 
 ### Details Page
 
