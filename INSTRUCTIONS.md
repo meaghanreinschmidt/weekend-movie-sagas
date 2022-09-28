@@ -46,6 +46,11 @@ This view is completed already! It displays all of the movies in the movie datab
 
 - TODO: When a movie poster is clicked, a user should be brought to the `/details` view for that movie.
 
+- [X] Set up database
+- [X] Create base README
+- [X] Add MUI
+- [ ] Give movie poster button functionality
+
 ### Details Page
 
 This should show all details **including ALL genres** for the selected movie, including title, description, and the image, too! Use Sagas and Redux to handle these requests and data.
