@@ -32,11 +32,10 @@ function* fetchAllMovies() {
 
 // gets data for one movie 
 function* fetchOneMovie(action) {
-    console.log(action.payload);
     try {
         // Get one movie's details 
         const oneMovie = yield axios.get(`/api/movie/${action.payload}`);
-        yield put ({ type: 'SET_ONE_MOVIE', payload: oneMovie });
+        yield put ({ type: 'SET_ONE_MOVIE', payload: oneMovie.data });
     } catch (error) {
         console.log('Error fetching movie', error);
         alert('Something went wrong!');
@@ -60,9 +59,7 @@ const movies = (state = [], action) => {
 const singleMovie = (state = [], action) => {
     switch (action.type) {
         case 'SET_ONE_MOVIE':
-            // return action.payload;
-            // console.log(`in singleMovie reducer ${action.payload.data[0]}`);
-            return action.payload.data[0];
+            return action.payload;
         default:
             return state;
     }

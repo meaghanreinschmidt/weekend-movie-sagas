@@ -16,10 +16,10 @@ function MovieItem({movie}) {
 
     return (
         <>
-            <h3>{movie.title}</h3>
             <Card>
-                <CardContent>
-            <CardMedia component="img" key={movie.id} image={movie.poster} alt={movie.title} onClick={handleSingleMovie}/>
+            <CardContent>
+            <h3>{movie.title}</h3>
+                <CardMedia component="img" key={movie.id} image={movie.poster} alt={movie.title} onClick={handleSingleMovie}/>
             </CardContent>
             </Card>
         </>

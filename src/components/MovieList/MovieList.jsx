@@ -12,8 +12,6 @@ function MovieList() {
         dispatch({ type: 'FETCH_MOVIES' });
     }, []);
 
-    
-
     return (
         <main>
             <h1>MovieList</h1>

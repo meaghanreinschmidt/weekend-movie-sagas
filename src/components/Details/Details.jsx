@@ -1,4 +1,4 @@
-import { useHistory, useParams } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -7,10 +7,9 @@ const Details = () => {
     const dispatch = useDispatch();
     const history = useHistory();
     const movie = useSelector(store => store.singleMovie);
-    const {id} = useParams();
 
     const getMovie = () => {
-        dispatch({ type: 'FETCH_ONE_MOVIE', payload: id });
+        dispatch({ type: 'FETCH_ONE_MOVIE', payload: movie.id});
     }
 
     useEffect(() => {
