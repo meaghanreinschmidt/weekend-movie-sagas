@@ -65,6 +65,10 @@ This should show all details **including ALL genres** for the selected movie, in
  > Hint : You can make a GET request for a specific movie. Remember `req.params` and `:id`?
 ---
 
+- [X] Add `Back to List` button and history.push to Home page
+- [ ] Make a GET request for a specific movie 
+- [ ] 
+
 ### General Considerations
 
 As one of your last projects, it's possible you will be sharing this with employers, so be sure to follow best practices and make it look good!
