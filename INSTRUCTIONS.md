@@ -66,7 +66,7 @@ This should show all details **including ALL genres** for the selected movie, in
 ---
 
 - [X] Add `Back to List` button and history.push to Home page
-- [ ] Make a GET request for a specific movie 
+- [X] Make a GET request for a specific movie 
 - [ ] 
 
 ### General Considerations
