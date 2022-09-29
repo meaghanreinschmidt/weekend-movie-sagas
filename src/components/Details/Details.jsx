@@ -1,15 +1,16 @@
-import { useHistory } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import axios from 'axios';
+
 
 const Details = () => {
     const dispatch = useDispatch();
-    const movies = useSelector(store => store.movies);
     const history = useHistory();
+    const movie = useSelector(store => store.singleMovie);
+    const {id} = useParams();
 
     const getMovie = () => {
-        dispatch({ type: 'FETCH_ONE_MOVIE' });
+        dispatch({ type: 'FETCH_ONE_MOVIE', payload: id });
     }
 
     useEffect(() => {
@@ -18,10 +19,10 @@ const Details = () => {
     
 
     return (
-        <>
+        <div>
             <button onClick={() => history.push('/')}>Back to List</button>
-            <h3>{movies.title}</h3>
-        </>
+            <h3>{movie.title}</h3>
+        </div>
     )
 }
 

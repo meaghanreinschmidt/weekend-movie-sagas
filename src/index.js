@@ -21,7 +21,7 @@ function* fetchAllMovies() {
     // get all movies from the DB
     try {
         const movies = yield axios.get('/api/movie');
-        console.log('get all:', movies.data);
+        // console.log('get all:', movies.data);
         yield put({ type: 'SET_MOVIES', payload: movies.data });
 
     } catch {
@@ -30,10 +30,13 @@ function* fetchAllMovies() {
         
 }
 
+// gets data for one movie 
 function* fetchOneMovie(action) {
+    console.log(action.payload);
     try {
-        yield axios.get(`/api/movie/${action.payload}`);
-        yield put ({ type: 'SET_MOVIES', payload: movies.data });
+        // Get one movie's details 
+        const oneMovie = yield axios.get(`/api/movie/${action.payload}`);
+        yield put ({ type: 'SET_ONE_MOVIE', payload: oneMovie });
     } catch (error) {
         console.log('Error fetching movie', error);
         alert('Something went wrong!');
@@ -48,6 +51,18 @@ const movies = (state = [], action) => {
     switch (action.type) {
         case 'SET_MOVIES':
             return action.payload;
+        default:
+            return state;
+    }
+}
+
+// Used to store one movie 
+const singleMovie = (state = [], action) => {
+    switch (action.type) {
+        case 'SET_ONE_MOVIE':
+            // return action.payload;
+            // console.log(`in singleMovie reducer ${action.payload.data[0]}`);
+            return action.payload.data[0];
         default:
             return state;
     }
@@ -68,6 +83,7 @@ const storeInstance = createStore(
     combineReducers({
         movies,
         genres,
+        singleMovie
     }),
     // Add sagaMiddleware to our store
     applyMiddleware(sagaMiddleware, logger),
