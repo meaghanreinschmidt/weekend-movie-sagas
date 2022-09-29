@@ -2,13 +2,15 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../modules/pool')
 
-// GET request for a specific movie
-router.get('/details/:id', (req, res) => {
-  const queryText = 'SELECT * FROM movies WHERE id=$1';
+// GET request for a specific movie, on click of movie poster
+router.get(':id', (req, res) => {
+  const queryText = 'SELECT * FROM "movies" WHERE id = $1';
   pool.query(queryText, [req.params.id])
-    .then((result) => { res.send(result.rows); })
+    .then((result) => { 
+      res.send(result.rows); 
+    })
     .catch((err) => {
-      console.log('Error completely SELECT movies query', err);
+      console.log('ERROR: Get one movie', err);
       res.sendStatus(500);
     });
 });

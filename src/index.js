@@ -33,6 +33,7 @@ function* fetchAllMovies() {
 function* fetchOneMovie(action) {
     try {
         yield axios.get(`/api/movie/${action.payload}`);
+        yield put ({ type: 'SET_MOVIES', payload: movies.data });
     } catch (error) {
         console.log('Error fetching movie', error);
         alert('Something went wrong!');
