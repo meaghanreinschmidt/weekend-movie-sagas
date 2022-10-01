@@ -3,11 +3,11 @@ const router = express.Router();
 const pool = require('../modules/pool')
 
 // GET request for a specific movie, on click of movie poster
-router.get(':id', (req, res) => {
+router.get('/:id', (req, res) => {
   const queryText = 'SELECT * FROM "movies" WHERE id = $1';
   pool.query(queryText, [req.params.id])
     .then((result) => { 
-      res.send(result.rows); 
+      res.send(result.rows[0]); 
     })
     .catch((err) => {
       console.log('ERROR: Get one movie', err);

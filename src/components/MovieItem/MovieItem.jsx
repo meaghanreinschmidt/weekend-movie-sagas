@@ -10,19 +10,19 @@ function MovieItem({movie}) {
 
     const handleSingleMovie = () => {
         console.log('clicked on single movie');
-        dispatch({ type: 'FETCH_ONE_MOVIE', payload: movie.id})
+        // dispatch({ type: 'FETCH_ONE_MOVIE', payload: movie.id})
         history.push(`/details/${movie.id}`);
     }
 
     return (
-        <>
+        <section className="movies">
             <Card>
             <CardContent>
             <h3>{movie.title}</h3>
                 <CardMedia component="img" key={movie.id} image={movie.poster} alt={movie.title} onClick={handleSingleMovie}/>
             </CardContent>
             </Card>
-        </>
+        </section>
 
     )
 }

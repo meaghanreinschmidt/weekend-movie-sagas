@@ -69,6 +69,9 @@ This should show all details **including ALL genres** for the selected movie, in
 - [X] Make a GET request for a specific movie 
 - [X] Make a saga and reducer for single movie
 - [X] Make MovieItem and map the list to item 
+- [X] Add Movie Title, Description, and Image to Details page
+
+- [ ] DON'T FORGET GENRES
 
 ### General Considerations
 
