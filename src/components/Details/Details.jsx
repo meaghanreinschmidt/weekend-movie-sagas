@@ -8,6 +8,7 @@ const Details = () => {
     const history = useHistory();
     const {id} = useParams();
     const movie = useSelector(store => store.singleMovie);
+    const genres = useSelector(store => store.genres);
 
     const getMovie = () => {
         dispatch({ type: 'FETCH_ONE_MOVIE', payload: id });
@@ -24,6 +25,7 @@ const Details = () => {
             <h3>{movie.title}</h3>
             <img src={movie.poster} alt={movie.title}/>
             <h5>{movie.description}</h5>
+            <p>Genres:</p>
         </div>
     )
 }
