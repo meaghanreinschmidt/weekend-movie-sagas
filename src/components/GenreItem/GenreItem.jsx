@@ -1,7 +1,9 @@
+import Typography from '@mui/material/Typography';
+
 function GenreItem({genre}) {
     return (
         <>
-            <p key={genre.id}>{genre.name}</p>
+            <Typography variant="body2" key={genre.id}>{genre.name}</Typography>
         </>
     )
 }
