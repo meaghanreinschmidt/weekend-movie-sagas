@@ -1,6 +1,7 @@
 import { useHistory, useParams } from 'react-router-dom';
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import GenreItem from '../GenreItem/GenreItem';
 
 
 const Details = () => {
@@ -25,7 +26,13 @@ const Details = () => {
             <h3>{movie.title}</h3>
             <img src={movie.poster} alt={movie.title}/>
             <h5>{movie.description}</h5>
-            <p>Genres:</p>
+            <section className="genres">
+            {genres.map(genre => {
+                return (
+                    <GenreItem genre={genre} />
+                )
+            })}
+            </section>
         </div>
     )
 }

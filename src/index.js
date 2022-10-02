@@ -39,7 +39,7 @@ function* fetchOneMovie(action) {
         const genres = yield axios.get(`/api/genre/${action.payload}`);
         console.log('get one:', oneMovie.data);
         yield put ({ type: 'SET_ONE_MOVIE', payload: oneMovie.data });
-        yield put ({ type: 'SET_GENRES', payload: genres.data});
+        yield put ({ type: 'SET_GENRES', payload: genres.data });
     } catch (error) {
         console.log('Error fetching movie', error);
         alert('Something went wrong!');

@@ -9,7 +9,7 @@ router.get('/:id', (req, res) => {
                  WHERE "movies"."id" = $1;`
   pool.query(queryText, [req.params.id])
     .then((result) => {
-      res.send(result.rows[0]);
+      res.send(result.rows);
     })
     .catch((err) => {
       console.log('ERROR: Get genres', err);
