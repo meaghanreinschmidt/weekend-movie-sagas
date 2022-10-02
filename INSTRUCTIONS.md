@@ -89,6 +89,17 @@ As one of your last projects, it's possible you will be sharing this with employ
 
 ### 1. Add Movie Form
 
+- [X] Add Movie Form component
+- [ ] Create navigation button to Movie Form component
+  - [ ] One input field for the movie title
+  - [ ] One input field for the poster URL
+  - [ ] Text area for description
+  - [ ] Drop down field for genres
+  - [ ] Create button to cancel and move to home page
+  - [ ] Create submit button to save movie form
+- [ ] Add more movie poster images into images folder
+
+
 This should show:
 
 - an input field (for the movie title)
