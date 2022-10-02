@@ -5,7 +5,6 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 
 function MovieItem({movie}) {
-    const dispatch = useDispatch();
     const history = useHistory();
 
     const handleSingleMovie = () => {

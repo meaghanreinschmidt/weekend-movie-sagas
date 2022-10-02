@@ -1,17 +1,19 @@
-.App {
+body {
   text-align: center;
+  background-color: darkred;
 }
-
 
 .App-header {
-  background-color: #222;
-  height: 150px;
+  background-color: black;
+  min-height: 70px;
   padding: 20px;
-  color: white;
+  color: darkred;
+  margin-bottom: 20px;
 }
 
-.App-title {
-  font-size: 1.5em;
+h1 {
+  font-family: lucida;
+  font-size: xx-large;
 }
 
 .App-intro {

@@ -2,6 +2,8 @@ import { useHistory, useParams } from 'react-router-dom';
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import GenreItem from '../GenreItem/GenreItem';
+import Button from '@mui/material/Button';
+import Card from '@mui/material/Card';
 
 
 const Details = () => {
@@ -22,7 +24,7 @@ const Details = () => {
 
     return (
         <div>
-            <button onClick={() => history.push('/')}>Back to List</button>
+            <Button style={{backgroundColor: 'black', color: 'darkred'}} onClick={() => history.push('/')}>Back to List</Button>
             <h3>{movie.title}</h3>
             <img src={movie.poster} alt={movie.title}/>
             <h5>{movie.description}</h5>
