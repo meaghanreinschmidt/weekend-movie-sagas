@@ -16,6 +16,7 @@ function MovieList() {
 
     return (
         <Box>
+            {/* <Grid> */}
             <Grid className="movies" container
                 spacing={0}
                 direction="row"

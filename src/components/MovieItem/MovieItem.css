@@ -1,3 +1,8 @@
-img {
-    margin: 20px;
+/* .card {
+    background-color: black;
+    border-radius: 1em;
+} */
+
+.card:hover {
+    opacity: 0.5;
 }

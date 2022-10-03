@@ -29,7 +29,7 @@ const Details = () => {
             <Button style={{ backgroundColor: 'black', color: 'white' }} onClick={() => history.push('/')}>Back to List</Button>
             <br />
             <br />
-            <Card sx={{ display: 'flex', padding: 8, backgroundColor: 'black', color: 'white'}}>
+            <Card sx={{ display: 'flex', padding: 8, backgroundColor: 'transparent', color: 'white'}}>
                 <Box>
                     <img src={movie.poster} alt={movie.title}></img>
                 </Box>

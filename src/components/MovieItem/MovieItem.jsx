@@ -1,9 +1,8 @@
 import { HashRouter as Router, Route, Link, useHistory } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import './MovieItem.css';
 import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 
 function MovieItem({movie}) {
     const history = useHistory();
@@ -16,7 +15,11 @@ function MovieItem({movie}) {
 
     return (
         <Grid>
-                <img className="movie-poster" src={movie.poster} alt={movie.title} onClick={handleSingleMovie}/>
+            <Card style={{backgroundColor: 'black', borderRadius: '1em'}} className="card">
+                <CardContent>
+                <img className="movie-poster" src={movie.poster} alt={movie.title} onClick={handleSingleMovie} />
+                </CardContent>
+            </Card>
         </Grid>
 
     )
