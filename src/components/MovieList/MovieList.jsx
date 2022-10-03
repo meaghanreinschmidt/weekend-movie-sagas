@@ -9,25 +9,25 @@ import Grid from '@mui/material/Grid';
 function MovieList() {
     const dispatch = useDispatch();
     const movies = useSelector(store => store.movies);
-    
+
     useEffect(() => {
         dispatch({ type: 'FETCH_MOVIES' });
     }, []);
 
     return (
         <Box>
-        <Grid className="movies" container
-  spacing={0}
-  direction="row"
-  alignItems="center"
-  justifyContent="center"
-  style={{ minHeight: '100vh' }}>
+            <Grid className="movies" container
+                spacing={0}
+                direction="row"
+                alignItems="center"
+                justifyContent="center"
+                style={{ minHeight: '100vh' }}>
                 {movies.map(movie => {
                     return (
                         <MovieItem movie={movie} />
                     );
                 })}
-        </Grid>
+            </Grid>
         </Box>
     );
 }
