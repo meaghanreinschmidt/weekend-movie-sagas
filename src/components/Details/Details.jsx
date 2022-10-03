@@ -3,13 +3,15 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import GenreItem from '../GenreItem/GenreItem';
 import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
-
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
 
 const Details = () => {
     const dispatch = useDispatch();
     const history = useHistory();
-    const {id} = useParams();
+    const { id } = useParams();
     const movie = useSelector(store => store.singleMovie);
     const genres = useSelector(store => store.genres);
 
@@ -20,22 +22,36 @@ const Details = () => {
     useEffect(() => {
         getMovie();
     }, [id]);
-    
+
 
     return (
-        <div>
-            <Button style={{backgroundColor: 'black', color: 'darkred'}} onClick={() => history.push('/')}>Back to List</Button>
-            <h3>{movie.title}</h3>
-            <img src={movie.poster} alt={movie.title}/>
-            <h5>{movie.description}</h5>
-            <section className="genres">
-            {genres.map(genre => {
-                return (
-                    <GenreItem genre={genre} />
-                )
-            })}
-            </section>
-        </div>
+        <>
+            <Button style={{ backgroundColor: 'black', color: 'white' }} onClick={() => history.push('/')}>Back to List</Button>
+            <br />
+            <br />
+            <Card sx={{ display: 'flex', padding: 8, backgroundColor: 'transparent', color: 'white'}}>
+                <Box>
+                    <img src={movie.poster} alt={movie.title}></img>
+                </Box>
+                <Box>
+                    <CardContent sx={{ flex: '1 0 auto' }}>
+                        <Typography variant="h6">{movie.title}</Typography>
+                        <Typography variant="caption">{movie.description}</Typography>
+                        <br />
+                        <br />
+                        <Typography variant="body1">Genres:</Typography>
+                        <section className="genres">
+                            {genres.map(genre => {
+                                return (
+                                    <GenreItem genre={genre} />
+                                )
+                            })}
+                        </section>
+                    </CardContent>
+
+                </Box>
+            </Card>
+        </>
     )
 }
 

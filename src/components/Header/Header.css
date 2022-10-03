@@ -1,0 +1,41 @@
+.App-header {
+  background-image: url('../../../public/images/bloodtwo.jpeg');
+}
+
+.App-title {
+  margin: 7px;
+  font-family: 'Anton', sans-serif;
+  font-size: 75px;
+  font-weight: 500;
+  color: #f7c1c1;
+  animation: neonSign 0.7s ease-in-out infinite alternate;
+}
+
+.App-subtitle {
+  font-family: 'Special Elite', cursive;
+  color: darkred;
+}
+
+@keyframes neonSign {
+  from {
+    text-shadow:  
+    0 0 6px rgba(103, 64, 64, 0.92),
+    0 0 30px rgba(228, 202, 202, 0.34),
+    0 0 12px rgba(242, 30, 30, 0.52),
+    0 0 21px rgba(242, 30, 30, 0.92),
+    0 0 34px rgba(242, 30, 30, 0.78),
+    0 0 54px rgba(255, 0, 0, 0.92); 
+  }
+  to {
+    text-shadow: 
+    0 0 6px rgba(176, 96, 96, 0.98),
+    0 0 30px rgba(228, 202, 202, 0.42),
+    0 0 12px rgba(242, 30, 30, 0.58),
+    0 0 22px rgba(242, 30, 30, 0.84),
+    0 0 22px rgba(255, 87, 2, 0.84),
+    0 0 38px rgba(233, 5, 5, 0.88),
+    0 0 60px rgb(148, 27, 3); 
+  }
+}
+
+

@@ -27,7 +27,6 @@ function* fetchAllMovies() {
     } catch {
         console.log('get all error');
     }
-        
 }
 
 // gets data for one movie 
