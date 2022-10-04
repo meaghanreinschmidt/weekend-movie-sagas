@@ -29,6 +29,7 @@ router.get('/', (req, res) => {
 
 });
 
+// POST for movie form (non functional now)
 router.post('/', (req, res) => {
   console.log(req.body);
   // RETURNING "id" will give us back the id of the created movie

@@ -15,10 +15,12 @@ const Details = () => {
     const movie = useSelector(store => store.singleMovie);
     const genres = useSelector(store => store.genres);
 
+    // get movie details
     const getMovie = () => {
         dispatch({ type: 'FETCH_ONE_MOVIE', payload: id });
     }
 
+    // load movie details
     useEffect(() => {
         getMovie();
     }, [id]);
@@ -29,7 +31,7 @@ const Details = () => {
             <Button style={{ backgroundColor: 'black', color: 'white' }} onClick={() => history.push('/')}>Back to List</Button>
             <br />
             <br />
-            <Card sx={{ display: 'flex', padding: 8, backgroundColor: 'transparent', color: 'white'}}>
+            <Card sx={{ display: 'flex', padding: 8, backgroundColor: 'transparent', color: 'white' }}>
                 <Box>
                     <img src={movie.poster} alt={movie.title}></img>
                 </Box>

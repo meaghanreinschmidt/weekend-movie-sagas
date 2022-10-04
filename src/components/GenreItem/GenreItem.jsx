@@ -1,5 +1,6 @@
 import Typography from '@mui/material/Typography';
 
+// List Genres on the details page
 function GenreItem({genre}) {
     return (
         <>

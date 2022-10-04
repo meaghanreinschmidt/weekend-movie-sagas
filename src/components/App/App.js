@@ -9,11 +9,11 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Router>        
+      <Router>   
+        {/* Movies page */}     
         <Route path="/" exact>
           <MovieList />
         </Route>
-        
         {/* Details page */}
         <Route path="/details/:id" exact>
           <Details />

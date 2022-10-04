@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../modules/pool')
 
+// GET route for genres
 router.get('/:id', (req, res) => {
   const queryText = `SELECT "genres"."name" FROM "genres"
                  JOIN "movies_genres" ON "movies_genres"."genre_id" = "genres"."id"

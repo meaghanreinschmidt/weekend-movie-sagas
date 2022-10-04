@@ -7,9 +7,9 @@ import CardContent from '@mui/material/CardContent';
 function MovieItem({movie}) {
     const history = useHistory();
 
+    // button click to go to details page
     const handleSingleMovie = () => {
         console.log('clicked on single movie');
-        // dispatch({ type: 'FETCH_ONE_MOVIE', payload: movie.id})
         history.push(`/details/${movie.id}`);
     }
 

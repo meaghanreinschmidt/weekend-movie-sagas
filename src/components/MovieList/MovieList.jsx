@@ -10,14 +10,16 @@ function MovieList() {
     const dispatch = useDispatch();
     const movies = useSelector(store => store.movies);
 
+    // load movies
     useEffect(() => {
         dispatch({ type: 'FETCH_MOVIES' });
     }, []);
 
     return (
         <Box>
-            {/* <Grid> */}
-            <Grid className="movies" container
+            <Grid 
+                className="movies" 
+                container
                 spacing={0}
                 direction="row"
                 alignItems="center"
