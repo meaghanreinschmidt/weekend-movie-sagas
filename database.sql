@@ -24,7 +24,42 @@ CREATE TABLE "movies_genres" (
   "genre_id" INT REFERENCES "genres" NOT NULL
 );
 
---------[ DATA! ]---------
+--------[ MY DATA!]--------
+
+INSERT INTO "genres" ("name")
+VALUES 
+('Adventure'),
+('Animated'),
+('Biographical'),
+('Comedy'),
+('Disaster'),
+('Drama'),
+('Epic'),
+('Fantasy'),
+('Musical'),
+('Romantic'),         --10
+('Science Fiction'),  --11
+('Space-Opera'),      --12
+('Superhero'),        --13
+('Horror'), 		  --14
+('Thriller'),		  --15
+('Slasher');		  --16
+
+INSERT INTO "movies" ("title", "poster", "description")
+VALUES ('The Shining', 'images/shining.jpeg', 'A novelist - Jack Torrance takes a job interview as winter caretaker of the isolated, old, huge and beautiful Overlook Hotel. Jack brings his wife - Wendy and his son Danny. It happens that Danny, has a mysterious power known as "The Shining". Danny meets Hallorann - the hotel cook in their first day arriving at the Overlook, who warns him about the hotel and the sinister Room 237. As the days go by, Danny has visions, meanwhile Jack starts driving into insanity, turning more and more aggressive, at the point that Danny and Wendy gets convinced that Jack might try to do something bad.'), ('Halloween', 'images/halloween.jpeg', 'On a cold Halloween night in 1963, six year old Michael Myers brutally murdered his 17-year-old sister, Judith. He was sentenced and locked away for 15 years. But on October 30, 1978, while being transferred for a court date, a 21-year-old Michael Myers steals a car and escapes Smith''s Grove. He returns to his quiet hometown of Haddonfield, Illinois, where he looks for his next victims.'), ('IT', 'images/it.jpeg', 'It (also referred to as Stephen King''s IT) is a 1990 horror/drama miniseries based on Stephen King''s novel of the same name. The story revolves around an inter-dimensional predatory life-form, which has the ability to transform itself into its prey''s worst fears, allowing it to exploit the phobias of its victims. It mostly takes the form of a sadistic, wisecracking clown called "Pennywise the Dancing Clown". The main protagonists are "The Losers Club", a group of outcast kids who discover Pennywise and vow to destroy him by any means necessary. The series takes place over two different time periods, the first when the Losers first discover Pennywise as children, and the second when they''re called back as adults to defeat Pennywise, who has resurfaced.'), ('Scream', 'images/scream.jpeg', 'A peaceful town in California turns into a bloodbath when a masked killer haunts the town. Sidney Prescott, a young teenage girl, whose mother was killed a year before, becomes the target of the mask killer! Her boyfriend Billy Loomis becomes the main suspect along with Sidney''s father. Local Tabloid News Reporter Gail Weathers and Woodsbroro''s Deputy Dwight "Dewey" Riley investigate and try to figure out who the killer is and if it''s the same person who killed Sid''s mom the year before!'), ('Friday the 13th', 'images/friday.jpeg', 'In 1958, two camp counselors are both murdered by an unseen killer. Twenty-one years later, the camp is opened again despite the townspeople''s fears that more mayhem will occur. The camp owner and counselors are murdered one-by-one by an unseen killer. Could he or she be the same person who killed the two camp counselors in 1958? Everything climaxes with the final counselor coming face-to-face with the killer.'), ('Carrie', 'images/carrie.jpeg', 'The story of Carrie White, a girl brought up, almost in isolation, by her domineering, religious mother Margaret. After an embarrassing incident in the showers causes her classmates to tease Carrie ruthlessly, her teacher Miss Collins disciplines them severely. However, one of the students feels sorry for what she did and asks her boyfriend to take Carrie to the senior prom instead of her. Determined to have revenge, the other students hatch a plot against Carrie, which turns horribly wrong when Carrie''s strange mental powers are unleashed during the school prom.'), ('The Thing', 'images/thing.jpeg', 'A US research station, Antarctica, early-winter 1982. The base is suddenly buzzed by a helicopter from the nearby Norwegian research station. They are trying to kill a dog that has escaped from their base. After the destruction of the Norwegian chopper the members of the US team fly to the Norwegian base, only to discover them all dead or missing. They do find the remains of a strange creature the Norwegians burned. The Americans take it to their base and deduce that it is an alien life form. After a while it is apparent that the alien can take over and assimilate into other life forms, including humans, and can spread like a virus. This means that anyone at the base could be inhabited by The Thing, and tensions escalate.'), ('The Bride of Frankenstein', 'images/frankenstein.jpeg', 'In this sequel to Frankenstein (1931) both Henry Frankenstein and his monster have survived. The monster, thought to be dead by the local villagers, is found out when he attempts to save a young girl from drowning. He''s taken into custody but escapes into the woods, where he meets a blind man who enchants him with his violin. Dr. Frankenstein meanwhile is forced to work with the mad Dr. Pretorius who has also been experimenting with the creation of life. When the monster eventually returns home, Frankenstein and Pretorius create a woman to be his friend, but her rejection of him leads to disaster.');
+
+INSERT INTO "movies_genres" ("movie_id", "genre_id")
+VALUES 
+(1,14),(1,15),    		-- The Shining
+(2,14),(2,16),          -- Halloween
+(3,14),(3,15),          -- IT
+(4,15),(4,16),          -- Scream
+(5,14),(5,16),          -- Friday the 13th
+(6,14),(6,15),          -- Carrie
+(7,11),(7,14),(7,15),	-- The Thing
+(8,14),(8,15);			-- The Bride of Frankenstein
+
+--------[ DATA! GIVEN TO US ]---------
 
 -- starter movies
 INSERT INTO "movies" ("title", "poster", "description")
